@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🍣 Sushi Menu</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background: url('https://images.unsplash.com/photo-1617196033094-fdd414c41cd3?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+      background-size: cover;
+      overflow: hidden;
+    }
+
+    .sushi-track {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      animation: spin 30s linear infinite;
+    }
+
+    .sushi-item {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    @keyframes spin {
+      from { transform: translate(-50%, -50%) rotate(0deg); }
+      to { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    .sushi-item:nth-child(1) { transform: rotate(0deg) translate(300px) rotate(0deg); }
+    .sushi-item:nth-child(2) { transform: rotate(60deg) translate(300px) rotate(-60deg); }
+    .sushi-item:nth-child(3) { transform: rotate(120deg) translate(300px) rotate(-120deg); }
+    .sushi-item:nth-child(4) { transform: rotate(180deg) translate(300px) rotate(-180deg); }
+    .sushi-item:nth-child(5) { transform: rotate(240deg) translate(300px) rotate(-240deg); }
+    .sushi-item:nth-child(6) { transform: rotate(300deg) translate(300px) rotate(-300deg); }
+
+    .back-button {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background-color: #ff4d6d;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 9999px;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+
+    .back-button:hover {
+      background-color: #e0435f;
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="back-button">⬅ 메인으로 돌아가기</a>
+
+  <div class="sushi-track">
+    <div class="sushi-item">📁</div>
+    <div class="sushi-item">🖼</div>
+    <div class="sushi-item">✏️</div>
+    <div class="sushi-item">📹</div>
+    <div class="sushi-item">🧪</div>
+    <div class="sushi-item">💻</div>
+  </div>
+</body>
+</html>
